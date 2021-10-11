@@ -133,12 +133,16 @@ function App() {
         });
         return filteredItem.map((color) => {
             return (
-                <div
-                    key={color.id}
+               <div key={color.id}>
+                    <div
                     className="color-item"
                     onClick={() => setColor(color.code)}
                     style={{ backgroundColor: `${color.code}` }}
-                ></div>
+                >
+                </div>
+                <span className="color-code">{color.code}</span>
+               </div>
+                
             );
         });
     };
@@ -154,6 +158,7 @@ function App() {
                 onChange={(e) => setSearch(e.target.value)}
             />
             <div className="color-block">
+            <span>click on color to copy</span>
                 {displayListColor(grayList).length > 0 ? (
                     <div className="color-list">
                         <div className="color-title">
@@ -251,6 +256,8 @@ function App() {
                     ""
                 )}
             </div>
+
+            <span> &copy;Amarjeet</span>
         </div>
     );
 }

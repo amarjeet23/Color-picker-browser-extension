@@ -148,10 +148,12 @@ function App() {
     };
     return (
         <div className="main">
-            <div
+            {/* <div
                 className="header"
                 style={{ backgroundColor: currentColor }}
-            ></div>
+            ></div> */}
+            <span> &copy;Amarjeet</span>
+            <br/>
             <input
                 placeholder="Search"
                 value={search}
@@ -256,8 +258,6 @@ function App() {
                     ""
                 )}
             </div>
-
-            <span> &copy;Amarjeet</span>
         </div>
     );
 }
